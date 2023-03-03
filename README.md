@@ -1,5 +1,7 @@
 # textjam-winter2023
 
+https://textjam.github.io/winter2023/
+
 built using [astro](https://astro.build)
 
 ## commands
