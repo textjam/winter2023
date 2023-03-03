@@ -23,6 +23,7 @@ const { title } = Astro.props;
   :root {
     --bg: black;
     --fg: white;
+    --link: rgb(164 171 255);
     font-size: 24px;
   }
   html {
@@ -33,5 +34,13 @@ const { title } = Astro.props;
   }
   body {
     margin: 1rem;
+  }
+
+  a {
+    color: var(--link);
+  }
+
+  .low-opacity {
+    opacity: 0.4;
   }
 </style>
