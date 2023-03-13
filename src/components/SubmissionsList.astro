@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+export interface Props {
+  submissions: CollectionEntry<"submissions">[];
+}
+
+const { submissions } = Astro.props;
+---
+
+<pre>{submissions.length === 0 && <i>none yet...</i>}{
+  submissions.map(({ slug, data }) => (
+    <>-{" "}<a href={`./${slug}`}>{data.title}</a> by {data.creatorLink ? <a href={data.creatorLink}>{data.creator}</a> : data.creator}<br /></>
+  ))}</pre>

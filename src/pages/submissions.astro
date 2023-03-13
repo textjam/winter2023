@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import SubmissionsList from "../components/SubmissionsList.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+const finalSubmissions = await getCollection(
+  "submissions",
+  ({ data }) => data.example === false && data.wip === false
+);
+const wipSubmissions = await getCollection(
+  "submissions",
+  ({ data }) => data.wip === true
+);
+const exampleSubmissions = await getCollection(
+  "submissions",
+  ({ data }) => data.example === true
+);
+---
+
+<PageLayout title="textjam winter2023 - submissions">
+  <pre>submissions
+
+unsure how to submit?, checkout <a href="../how-to-submit/">how to submit</a>
+
+
+final submissions
+<SubmissionsList submissions={finalSubmissions} />
+
+work-in-progress submissions
+<SubmissionsList submissions={wipSubmissions} />
+
+example submissions
+<SubmissionsList submissions={exampleSubmissions} /></pre>
+</PageLayout>

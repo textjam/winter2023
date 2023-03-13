@@ -1,0 +1,38 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+const options = {
+  month: "long",
+  day: "numeric",
+} as const;
+
+export async function getStaticPaths() {
+  const news = await getCollection("updates");
+  return news.map(({ slug }) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const {
+  render,
+  data: { title, date },
+} = (await getEntryBySlug("updates", slug!))!;
+const { Content } = await render();
+---
+
+<PageLayout title={`${title} - textjam winter2023`}>
+  <p>{title}</p>
+  <i>{new Intl.DateTimeFormat("en-US", options).format(date).toLowerCase()}</i>
+  <div class="spacing"></div>
+  <Content />
+</PageLayout>
+
+<style is:global>
+  .spacing {
+    height: 1rem;
+  }
+
+  img {
+    border: 2px solid white;
+  }
+</style>
