@@ -1,15 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
 
-<Layout title="textjam winter2023">
-  <main>
-    <pre>textjam winter2023
-march 13th -&gt; april 3rd
-
-<a href="https://muncompsci.ca/">muncs</a> x <a href="https://ctsnl.ca/">ctsnl</a> x <a href="https://www.meetup.com/ndevmeetup/">ndev</a> x <a href="https://discord.gg/FvecdsXnkB">munc²</a>
-
-a text-based thing jam
+<PageLayout title="textjam winter2023 - about">
+  <pre>a text-based thing jam
 
 -&gt; <a href="https://discord.gg/m2VDZSqQwE">join us on our discord</a> &lt;-
 
@@ -23,8 +17,8 @@ FAQ
   to the users screen
 
   therefore a valid submission could be something that only
-  reads and prints output to and from a user via the terminal,
-  like a classic text-based dungeon game
+  reads and prints output to and from a user via the
+  terminal, like a classic text-based dungeon game
 
   great examples are:
 
@@ -35,13 +29,14 @@ FAQ
   basically anything related to <a href="https://en.wikipedia.org/wiki/Interactive_fiction">'interactive fiction'</a>,
   but also anything limited to a terminal / text screen that
   draws things just using characters, even if what its
-  representing behind the scenes is a lot busier than just text
+  representing behind the scenes is a lot more than just text
 
   it is encouraged to go 'as low as you can go' and have a
-  program that works on the command line / only reads in standard
-  input and output, but if you wish to reach for something higher
-  level such as a website which is just text, or even a game
-  engine but only writing text to screen, that's also acceptable
+  program that works on the command line / only reads in
+  standard input and output, but if you wish to reach for
+  something higher level such as a website which is just text,
+  or even a game engine but only writing text to screen,
+  that's also acceptable
 
   an example of a game that stretches what it means to be 'text
   based', but can still be considered an entry to this jam,
@@ -59,11 +54,14 @@ FAQ
 </details>
 
 <details><summary> how do i send in my submission?</summary>
-  <i>we are currently figuring that out, check back
-  to this site later for details...</i>
+  we have a dedicated page, <a href="./how-to-submit">how to submit</a>
+
+  checkout the <a href="./submissions">submissions</a> section to see some example
+  submissions, alongside any work in progress or finished
+  submissions
 </details>
 
-<details><summary> i'm quite new to programming, i'm not sure if i can do this...</summary>
+<details><summary> i'm quite new, i'm not sure if i can do this...</summary>
   even the following python code:
 
     name = input("who are you:")
@@ -102,27 +100,26 @@ FAQ
   to stuff you have done before
 </details>
 
+<details><summary> can i use <b>x</b>?</summary>
+  sound
+
+    yes, sound is permitted
+
+
+  any programming language
+
+    sure!
+
+
+  something like <a href="https://twinery.org/">Twine</a> which might not
+  require me to write any code
+
+    go ahead :)
+</details>
+
 <details><summary> i have more questions! where do i ask them?</summary>
   there is a dedicated <a href="https://discord.gg/YZ8jGajaf7">channel in the discord, #questions</a>
   or, if you are an email person, feel free to reach out
-  to me@jackharrhy.com
-</details>
-
----
-
-this site is a work in progress,
-and shall be populated more hopefully
-before the start on march 13th :)
-
-<a href="https://github.com/textjam/winter2023">edit this site on github</a></pre>
-  </main>
-</Layout>
-
-<style>
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-  }
-</style>
+  to me@jackharrhy.com</details>
+</pre>
+</PageLayout>

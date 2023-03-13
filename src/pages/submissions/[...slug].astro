@@ -1,0 +1,86 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const news = await getCollection("submissions");
+  return news.map(({ slug }) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const {
+  render,
+  data: {
+    title,
+    creator,
+    creatorLink,
+    using,
+    githubLink,
+    itchioLink,
+    wip,
+    example,
+  },
+} = (await getEntryBySlug("submissions", slug!))!;
+const { Content } = await render();
+---
+
+<PageLayout title={`${title} - textjam winter2023 submission`}>
+  {
+    example && (
+      <>
+        <i>
+          <p>
+            <b>! EXAMPLE !</b>
+          </p>
+          <p>
+            this is not an entry to this textjam, this is an example of what an
+            entry looks like
+          </p>
+          <p>
+            <b>! EXAMPLE !</b>
+          </p>
+        </i>
+        <div class="spacing" />
+      </>
+    )
+  }
+  <p>{title}</p>
+  {
+    creatorLink ? (
+      <p>
+        by <a href={creatorLink}>{creator}</a>
+      </p>
+    ) : (
+      <p>by {creator}</p>
+    )
+  }
+  {wip && <i>work in progress</i>}
+  <div class="spacing"></div>
+  {
+    githubLink && (
+      <p>
+        github:{" "}
+        <a href={githubLink}>{githubLink.split("/").slice(2, 5).join("/")}</a>
+      </p>
+    )
+  }
+  {
+    itchioLink && (
+      <p>
+        itch.io: <a href={itchioLink}>{itchioLink.split("//")[1]}</a>
+      </p>
+    )
+  }
+  {using && <p>using: {using.join(",")}</p>}
+  <Content />
+</PageLayout>
+
+<style is:global>
+  .spacing {
+    height: 1rem;
+  }
+
+  img {
+    border: 2px solid white;
+  }
+</style>
