@@ -8,7 +8,7 @@ title: start of the winter2023 textjam!
 we already have 27 members over on the <a href="https://discord.gg/m2VDZSqQwE">textjam discord</a>,
 if you haven't joined yet, don't fret to hop!
 
-<img alt="Salute" src="/assets/updates/start/salute.png" />
+<img alt="Salute" src="/winter2023/assets/updates/start/salute.png" />
 
 some have already started on a base for their project
 

@@ -13,7 +13,7 @@ example: True
 
 a zork-y test-based dungeon crawler built in ruby
 
-<img alt="Gameplay" src="/assets/submissions/urists-quest/gameplay.jpg" />
+<img alt="Gameplay" src="/winter2023/assets/submissions/urists-quest/gameplay.jpg" />
 
 <a href="https://github.com/dunningkrugerkid/game-jam-game">clone from github</a>
 
