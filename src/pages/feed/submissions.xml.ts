@@ -13,7 +13,7 @@ export const get: APIRoute = async function get({ site }) {
     description: "submissions to the winter 2023 textjam",
     site: site.toString(),
     items: submissions.map(({ slug, data }) => ({
-      title: data.title,
+      title: `${data.title} by ${data.creator}`,
       pubDate: data.updated,
       link: `${import.meta.env.BASE_URL}submissions/${slug}/`,
     })),
