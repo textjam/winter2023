@@ -1,5 +1,5 @@
 ---
-date: 2022-03-13
+date: 2023-03-13
 title: start of the winter2023 textjam!
 ---
 
