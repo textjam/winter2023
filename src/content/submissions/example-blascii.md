@@ -11,11 +11,15 @@ example: True
 ---
 <pre>A text-based shooter sorta-kinda-like Nuclear Throne.
 
+Shoot things! In ASCII!
+
+<img alt="Gameplay" src="/winter2023/assets/submissions/blascii/gameplay.png" />
+
 Run it with init.py.
 
 Controls:
 
-WASD - Move
+WASD - MOVE
 IJKL - AIM
-Space - Shoot
+Space - SHOOT
 </pre>
