@@ -9,6 +9,6 @@ const updates = await getCollection("updates");
 <PageLayout title="textjam winter2023 - updates">
   <pre>updates
 
-{updates.map(({ slug, data }) => (<>- {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>))}
+{updates.reverse().map(({ slug, data }) => (<>- {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>))}
 <a href="../feeds/">feeds</a></pre>
 </PageLayout>
