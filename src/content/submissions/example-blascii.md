@@ -4,12 +4,12 @@ creator: Ethan Denny
 creatorLink: https://github.com/EthanDenny/
 using:
   - Python
-githubProfile: https://github.com/EthanDenny/
 githubLink: https://github.com/EthanDenny/blascii
 itchioLink: https://asaltynewfie.itch.io/blascii
 example: True
 updated: 2023-03-14
 ---
+
 <pre>A text-based shooter sorta-kinda-like Nuclear Throne.
 
 Shoot things! In ASCII!

@@ -6,7 +6,6 @@ const submissionsCollection = defineCollection({
     creator: z.string(),
     creatorLink: z.string().optional(),
     using: z.array(z.string()).optional(),
-    githubProfile: z.string().optional(),
     githubLink: z.string().optional(),
     itchioLink: z.string().optional(),
     devlogPrefix: z.string().optional(),
