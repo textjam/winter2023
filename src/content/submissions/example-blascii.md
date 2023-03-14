@@ -11,6 +11,8 @@ example: True
 ---
 <pre>A text-based shooter sorta-kinda-like Nuclear Throne.
 
+<img alt="Gameplay" src="/winter2023/assets/submissions/blascii/gameplay.png" />
+
 Run it with init.py.
 
 Controls:
