@@ -12,6 +12,7 @@ const submissionsCollection = defineCollection({
     devlogPrefix: z.string().optional(),
     wip: z.boolean().default(false),
     example: z.boolean().default(false),
+    updated: z.date(),
   }),
 });
 

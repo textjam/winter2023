@@ -8,6 +8,7 @@ githubProfile: https://github.com/dunningkrugerkid
 githubRepo: https://github.com/dunningkrugerkid/game-jam-game
 itchioLink: https://dunningkrugerkid.itch.io/urists-quest
 example: True
+updated: 2023-03-14
 ---
 <pre>welcome to urist's quest!
 
