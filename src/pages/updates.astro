@@ -1,11 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import { intlOptions } from "../data";
 import PageLayout from "../layouts/PageLayout.astro";
-
-const options = {
-  month: "long",
-  day: "numeric",
-} as const;
 
 const updates = await getCollection("updates");
 ---
@@ -13,5 +9,5 @@ const updates = await getCollection("updates");
 <PageLayout title="textjam winter2023 - updates">
   <pre>updates
 
-{updates.map(({ slug, data }) => (<>- {new Intl.DateTimeFormat('en-US', options).format(data.date).toLowerCase()}, <a href={`./${slug}`}>{data.title}</a><br /></>))}</pre>
+{updates.map(({ slug, data }) => (<>- {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>))}</pre>
 </PageLayout>

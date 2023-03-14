@@ -4,7 +4,7 @@ import { intlOptions } from "../../data";
 import PageLayout from "../../layouts/PageLayout.astro";
 
 export async function getStaticPaths() {
-  const news = await getCollection("updates");
+  const news = await getCollection("devlogs");
   return news.map(({ slug }) => ({ params: { slug } }));
 }
 
@@ -12,7 +12,7 @@ const { slug } = Astro.params;
 const {
   render,
   data: { title, date },
-} = (await getEntryBySlug("updates", slug!))!;
+} = (await getEntryBySlug("devlogs", slug!))!;
 const { Content } = await render();
 ---
 

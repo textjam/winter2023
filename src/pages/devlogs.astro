@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import { devlogNames, intlOptions } from "../data";
+
+const devLogs = await Promise.all(
+  devlogNames.map(async (devlogName) => ({
+    name: devlogName,
+    logs: await getCollection("devlogs", ({ id }) => id.startsWith(devlogName)),
+  }))
+);
+---
+
+<PageLayout title="textjam winter2023 - devlogs">
+  <pre>devlogs
+
+want a devlog of your own here?,
+checkout <a href="../how-to-create-a-devlog/">how to create a devlog</a>
+
+{devLogs.map(({name, logs}) => <>- {name}<br />{logs.map(({ slug, data }) => <>  - {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>)}&#10;</>)}</pre>
+</PageLayout>
