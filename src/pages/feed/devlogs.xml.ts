@@ -13,7 +13,7 @@ export const get: APIRoute = async function get({ site }) {
     description: "all devlogs from the winter 2023 textjam",
     site: site.toString(),
     items: devlogs.map(({ slug, data }) => ({
-      title: data.title,
+      title: `${slug.split("/")[0]} devlog - ${data.title}`,
       pubDate: data.date,
       link: `${import.meta.env.BASE_URL}devlogs/${slug}/`,
     })),
