@@ -1,9 +1,8 @@
 ---
-title: look-alive-sunshine
+title: look alive sunshine
 date: 2023-03-15
 ---
-<pre>
-I love horror, specifically cosmic horror. I haven't gotten the idea of making a horror game
+<pre>I love horror, specifically cosmic horror. I haven't gotten the idea of making a horror game
 out of my head. So I'm taking some inspiration from various sources, perhaps some absurdist inspiration from 
 Kafka and Camus and from Lovecraft's <em>The Alchemist</em>. 
 
@@ -17,5 +16,4 @@ As of now I'm currently refactoring code and getting the basic of the game flow 
 Also I need to do grammar and spelling checks.
 
 Either way the project is still forming and I hope to make an interesting yet fun experience.
-Here's to a fun TextJam!
-</pre>
+Here's to a fun TextJam!</pre>
