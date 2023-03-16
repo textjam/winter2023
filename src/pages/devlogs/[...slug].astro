@@ -19,7 +19,7 @@ const { Content } = await render();
 <PageLayout title={`${title} - textjam winter2023`}>
   <p>{title}</p>
   <i
-    >{
+    >posted {
       new Intl.DateTimeFormat("en-US", intlOptions).format(date).toLowerCase()
     }</i
   >
