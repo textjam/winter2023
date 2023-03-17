@@ -89,15 +89,17 @@ const devlogs = await getDevlogs();
       <>
         <div class="spacing" />
         devlogs
-        {devlogs.map(({ slug: devlogSlug, data }) => (
-          <p>
-            -{" "}
-            {`${new Intl.DateTimeFormat("en-US", intlOptions)
-              .format(data.date)
-              .toLowerCase()},`}
-            <a href={`../../devlogs/${devlogSlug}/`}>{data.title}</a>
-          </p>
-        ))}
+        {devlogs
+          .sort((a, b) => (a.data.date > b.data.date ? -1 : 1))
+          .map(({ slug: devlogSlug, data }) => (
+            <p>
+              -{" "}
+              {`${new Intl.DateTimeFormat("en-US", intlOptions)
+                .format(data.date)
+                .toLowerCase()},`}
+              <a href={`../../devlogs/${devlogSlug}/`}>{data.title}</a>
+            </p>
+          ))}
         <div class="spacing" />
       </>
     )

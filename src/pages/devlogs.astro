@@ -17,6 +17,6 @@ const devLogs = await Promise.all(
 want a devlog of your own here?,
 checkout <a href="../how-to-create-a-devlog/">how to create a devlog</a>
 
-{devLogs.map(({name, logs}) => <>- {name}<br />{logs.map(({ slug, data }) => <>  - {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>)}&#10;</>)}
+{devLogs.map(({name, logs}) => <>- {name}<br />{logs.sort((a, b) => a.data.date > b.data.date ? -1 : 1).map(({ slug, data }) => <>  - {new Intl.DateTimeFormat('en-US', intlOptions).format(data.date).toLowerCase()}, <a href={`./${slug}/`}>{data.title}</a><br /></>)}&#10;</>)}
 <a href="../feeds/">feeds</a></pre>
 </PageLayout>

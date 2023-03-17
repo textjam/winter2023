@@ -10,13 +10,16 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const {
+  id,
   render,
   data: { title, date },
 } = (await getEntryBySlug("devlogs", slug!))!;
 const { Content } = await render();
 ---
 
-<PageLayout title={`${title} - textjam winter2023`}>
+<PageLayout
+  title={`${title} - ${id.split("/")[0]} devlog - textjam winter2023`}
+>
   <p>{title}</p>
   <i
     >posted {
@@ -32,7 +35,12 @@ const { Content } = await render();
     height: 1rem;
   }
 
-  img {
+  img,
+  video {
     border: 2px solid white;
+  }
+
+  video {
+    max-height: 50vh;
   }
 </style>
