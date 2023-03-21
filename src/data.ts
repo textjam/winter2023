@@ -3,4 +3,4 @@ export const intlOptions = {
   day: "numeric",
 } as const;
 
-export const devlogNames = ["jacks", "keeblog","vlad", "nit"];
+export const devlogNames = ["ethan", "jacks", "keeblog", "vlad", "nit"];
