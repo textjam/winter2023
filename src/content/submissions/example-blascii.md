@@ -10,6 +10,13 @@ example: True
 updated: 2023-03-14
 ---
 
+<style>
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
 <pre>A text-based shooter sorta-kinda-like Nuclear Throne.
 
 Shoot things! In ASCII!
