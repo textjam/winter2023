@@ -7,8 +7,8 @@ using:
   - Blessed
 githubLink: https://github.com/EthanDenny/tiny-text-editor/
 devlogPrefix: ethan
-wip: True
-updated: 2023-03-21
+wip: False
+updated: 2023-04-04
 ---
 
 <pre>a minimalist text editor with pleasant colours</pre>
