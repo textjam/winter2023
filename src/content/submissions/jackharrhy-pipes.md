@@ -8,8 +8,10 @@ using:
   - SSH
 githubLink: https://github.com/jackharrhy/pipes
 devlogPrefix: jacks
-wip: True
-updated: 2023-03-17
+wip: False
+updated: 2023-04-05
 ---
 
-<pre>a wip pipe puzzle game</pre>
+<pre>a pipe puzzle game
+
+to play: ssh jackharrhy.dev -p 5555</pre>
